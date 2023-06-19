@@ -52,7 +52,7 @@ interface ProductEntry {
 
 function shopSitemap(data: SitemapQueryData, baseUrl: string) {
   const productsData = flattenConnection(data.products)
-    .filter((product) => product.onlineStoreUrl)
+    // .filter((product) => product.onlineStoreUrl)
     .map((product) => {
       const url = `${baseUrl}/products/${product.handle}`;
 
@@ -80,7 +80,7 @@ function shopSitemap(data: SitemapQueryData, baseUrl: string) {
     });
 
   const collectionsData = flattenConnection(data.collections)
-    .filter((collection) => collection.onlineStoreUrl)
+    // .filter((collection) => collection.onlineStoreUrl)
     .map((collection) => {
       const url = `${baseUrl}/collections/${collection.handle}`;
 
@@ -92,7 +92,7 @@ function shopSitemap(data: SitemapQueryData, baseUrl: string) {
     });
 
   const pagesData = flattenConnection(data.pages)
-    .filter((page) => page.onlineStoreUrl)
+    // .filter((page) => page.onlineStoreUrl)
     .map((page) => {
       const url = `${baseUrl}/pages/${page.handle}`;
 
